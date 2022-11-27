@@ -3,15 +3,9 @@ let myImage = document.querySelector('img');
 
 function changePicture() {
     let MySrc = myImage.getAttribute('src');
-    if (MySrc === 'images/kokomi.jpg') {
-        myImage.setAttribute('src', 'images/jk_kokomi.jpg');
-    }
-    else if (MySrc === 'images/jk_kokomi.jpg') {
-        myImage.setAttribute('src', 'images/kokomi2.jpg');
-    }
-    else {
-        myImage.setAttribute('src', 'images/kokomi.jpg');
-    }
+    let random = Math.floor(Math.random() * 100) % 64 + 1;
+    // alert(random);
+    myImage.setAttribute('src', 'images/' + random);
 }
 
 myImage.onclick = function () {
